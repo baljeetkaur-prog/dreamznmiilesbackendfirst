@@ -1014,4 +1014,5 @@ app.get("/api/query/monthly", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch monthly enquiries" });
   }
 });
+app.get("/health", (req, res) => res.status(200).send("ok"));
 const PORT = process.env.PORT || 9000; app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
